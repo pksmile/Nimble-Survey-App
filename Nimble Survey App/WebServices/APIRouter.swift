@@ -59,7 +59,7 @@ enum APIRouter: URLRequestConvertible {
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
         
-        let accessToken =   UIViewController().savedTokenDatas.accessToken
+        let accessToken =   savedTokenDatas.accessToken
         if accessToken   !=  "" {
             urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
         }

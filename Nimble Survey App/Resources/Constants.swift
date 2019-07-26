@@ -8,7 +8,32 @@
 
 import Foundation
 
+
+var savedTokenDatas: AccessTokenModel{
+    get {
+        let userD : UserDefaults = UserDefaults.standard
+        if let savedToken = userD.object(forKey: SavedAccessTokenDatasKey) as? Data {
+            let decoder = JSONDecoder()
+            if let loadedTokenData = try? decoder.decode(AccessTokenModel.self, from: savedToken) {
+                return loadedTokenData
+            }
+        }
+        return AccessTokenModel(accessToken: "", tokenType: "", expiresIn: 0, createdAt: 0)
+    }
+    set(newVal) {
+        let userD : UserDefaults = UserDefaults.standard
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(newVal) {
+            userD.set(encoded, forKey: SavedAccessTokenDatasKey)
+            userD.synchronize()
+        }
+    }
+}
+
+
 let SavedAccessTokenDatasKey    =   "Saved AccessToken Datas Key"
+
+
 struct APIHelper {
     struct Server {
         static let baseURL = "https://nimble-survey-api.herokuapp.com/"

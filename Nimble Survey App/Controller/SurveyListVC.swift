@@ -36,16 +36,15 @@ class SurveyListVC: UIPageViewController{
     
     
     func callWebservice(){
-        if self.savedTokenDatas.accessToken != ""{
-            let date = Date(timeIntervalSince1970: self.savedTokenDatas.createdAt)
+        if savedTokenDatas.accessToken != ""{
+            let date = Date(timeIntervalSince1970: savedTokenDatas.createdAt)
             let dateFormatter = DateFormatter()
             dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
             dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
             dateFormatter.timeZone = TimeZone(identifier: "en-US")
             let localDate = dateFormatter.string(from: date)
             
-            let newDate =   dateFormatter.date(from: localDate)?.addingTimeInterval(self.savedTokenDatas.expiresIn)
-            print("new date is:- \(dateFormatter.string(from: newDate!))")
+            let newDate =   dateFormatter.date(from: localDate)?.addingTimeInterval(savedTokenDatas.expiresIn)
             
             if Date() > dateFormatter.date(from: dateFormatter.string(from: newDate!))!{
                 refreshAccessToken()
@@ -80,28 +79,17 @@ class SurveyListVC: UIPageViewController{
     }
     
     func refreshAccessToken(){
-        self.printAccessTokenDatas(tag: "BEFORE")
+        
         APIClient.refreshAccessToken { (result) in
-            print("check results:-\(result)")
             switch result {
             case .success(let modelAccessToken):
-                self.savedTokenDatas    =   modelAccessToken
-                self.printAccessTokenDatas(tag: "AFTER")
+                savedTokenDatas    =   modelAccessToken
                 self.callWebservice()
             case .failure(let error):
                 print(error.localizedDescription)
             }
             
         }
-    }
-    
-    func printAccessTokenDatas(tag : String){
-        print("\(tag)")
-        print("access Token:- \(self.savedTokenDatas.accessToken)")
-        print("Token type:- \(self.savedTokenDatas.tokenType)")
-        print("expired in:- \(self.savedTokenDatas.expiresIn)")
-        print("creates at:- \(self.savedTokenDatas.createdAt)")
-        print("\(tag)")
     }
     
     @IBAction func actionRefresh(_ sender: Any) {

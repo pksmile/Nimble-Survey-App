@@ -28,7 +28,6 @@
 		849C77F122E9833E00656B73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C77E922E9833E00656B73 /* Constants.swift */; };
 		849C77F222E9833E00656B73 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C77EB22E9833E00656B73 /* ResponseModel.swift */; };
 		849C77F322E9833E00656B73 /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C77EC22E9833E00656B73 /* AccessTokenModel.swift */; };
-		849C77F622E9847700656B73 /* SavedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C77F522E9847700656B73 /* SavedValues.swift */; };
 		849C77F822E9942100656B73 /* SurveyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C77F722E9942100656B73 /* SurveyListModel.swift */; };
 		ED3800A8469ED5947FAB5199 /* Pods_Nimble_Survey_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA5AED39502D6339D02B170 /* Pods_Nimble_Survey_AppTests.framework */; };
 /* End PBXBuildFile section */
@@ -81,7 +80,6 @@
 		849C77E922E9833E00656B73 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		849C77EB22E9833E00656B73 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		849C77EC22E9833E00656B73 /* AccessTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
-		849C77F522E9847700656B73 /* SavedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedValues.swift; sourceTree = "<group>"; };
 		849C77F722E9942100656B73 /* SurveyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListModel.swift; sourceTree = "<group>"; };
 		9C9C6A3FA6F402415AABEFD1 /* Pods_Nimble_Survey_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_Survey_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE6DC8AD6DDFD844D5FACE /* Pods-Nimble Survey App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble Survey App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nimble Survey App/Pods-Nimble Survey App.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 		849C77F422E9845B00656B73 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				849C77F522E9847700656B73 /* SavedValues.swift */,
 				8417670B22EADAB50042DBA6 /* RoundButton.swift */,
 			);
 			path = Helper;
@@ -560,7 +557,6 @@
 				849C77F222E9833E00656B73 /* ResponseModel.swift in Sources */,
 				849C77EE22E9833E00656B73 /* APIRouter.swift in Sources */,
 				849C77F822E9942100656B73 /* SurveyListModel.swift in Sources */,
-				849C77F622E9847700656B73 /* SavedValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
