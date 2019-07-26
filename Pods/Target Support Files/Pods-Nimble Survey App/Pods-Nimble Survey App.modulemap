@@ -1,0 +1,6 @@
+framework module Pods_Nimble_Survey_App {
+  umbrella header "Pods-Nimble Survey App-umbrella.h"
+
+  export *
+  module * { export * }
+}

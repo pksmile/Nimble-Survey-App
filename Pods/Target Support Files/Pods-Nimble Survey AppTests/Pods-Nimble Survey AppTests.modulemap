@@ -1,0 +1,6 @@
+framework module Pods_Nimble_Survey_AppTests {
+  umbrella header "Pods-Nimble Survey AppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x7m-xH-yR5">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Surveys-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SurveyListVC" customModule="Nimble_Survey_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sm5-S9-8zh">
+                                <rect key="frame" x="20" y="89" width="391" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Surveys" id="FD7-rE-8dQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="5Bl-Dz-OzJ">
+                            <connections>
+                                <action selector="actionRefresh:" destination="BYZ-38-t0r" id="8Om-b2-MZc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311.5942028985507" y="-581.25"/>
+        </scene>
+        <!--Surveys-->
+        <scene sceneID="L4v-WV-g0H">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="Wst-kO-e32" customClass="SurveyListVC" customModule="Nimble_Survey_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Surveys" id="brb-el-sAf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="wla-dg-h1r">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="actionRefresh:" destination="Wst-kO-e32" id="Czm-Ae-ROy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="2mS-XX-6W1" kind="show" identifier="segueSurvey" id="Srd-NY-OEO"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLK-xT-CNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205.7971014492755" y="85.044642857142847"/>
+        </scene>
+        <!--Survey List ImageVC-->
+        <scene sceneID="u0s-fy-zI5">
+            <objects>
+                <viewController storyboardIdentifier="SurveyListImageVC" id="xTj-NE-6IS" customClass="SurveyListImageVC" customModule="Nimble_Survey_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYM-Hi-WVw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-Uy-Ho2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="InU-6K-RlG">
+                                <rect key="frame" x="20" y="252" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GH6-oF-Q60"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label ,nsd,bkjsabdansmbdmnabdmnasbmdnbasmndbasmnbdamnsbdmnasbdmnasbdnmasbdmnasbdmnasbdmnas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-Ox-vF1">
+                                <rect key="frame" x="20" y="297" width="374" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="101" id="Zdu-4Q-8fp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-1N-awm" customClass="RoundButton" customModule="Nimble_Survey_App" customModuleProvider="target">
+                                <rect key="frame" x="75" y="812" width="264" height="50"/>
+                                <color key="backgroundColor" red="0.79317319393157959" green="0.1244887188076973" blue="0.17980846762657166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="v5Q-vB-ESg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Take the survey">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionTakeSurvey:" destination="xTj-NE-6IS" eventType="touchUpInside" id="aWe-t4-gad"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fdj-1N-awm" firstAttribute="bottom" secondItem="ukF-Ah-avJ" secondAttribute="bottom" id="032-50-L3s"/>
+                            <constraint firstItem="InU-6K-RlG" firstAttribute="top" secondItem="ukF-Ah-avJ" secondAttribute="top" constant="164" id="0bb-HK-vfZ"/>
+                            <constraint firstItem="eTp-Uy-Ho2" firstAttribute="leading" secondItem="ukF-Ah-avJ" secondAttribute="leading" id="3XM-Uu-mbq"/>
+                            <constraint firstItem="eTp-Uy-Ho2" firstAttribute="top" secondItem="ukF-Ah-avJ" secondAttribute="bottom" constant="-774" id="7h8-Pp-mKe"/>
+                            <constraint firstItem="InU-6K-RlG" firstAttribute="leading" secondItem="ukF-Ah-avJ" secondAttribute="leading" constant="20" id="FpX-8q-cHA"/>
+                            <constraint firstItem="ukF-Ah-avJ" firstAttribute="trailing" secondItem="InU-6K-RlG" secondAttribute="trailing" constant="20" id="KnD-mg-d3G"/>
+                            <constraint firstItem="ukF-Ah-avJ" firstAttribute="trailing" secondItem="Fdj-1N-awm" secondAttribute="trailing" constant="75" id="QgE-3F-YbJ"/>
+                            <constraint firstItem="ukF-Ah-avJ" firstAttribute="trailing" secondItem="1yg-Ox-vF1" secondAttribute="trailing" constant="20" id="RjM-ok-BS1"/>
+                            <constraint firstItem="1yg-Ox-vF1" firstAttribute="leading" secondItem="ukF-Ah-avJ" secondAttribute="leading" constant="20" id="TaK-ff-EGW"/>
+                            <constraint firstItem="Fdj-1N-awm" firstAttribute="leading" secondItem="ukF-Ah-avJ" secondAttribute="leading" constant="75" id="ZSM-pW-YUS"/>
+                            <constraint firstItem="1yg-Ox-vF1" firstAttribute="top" secondItem="InU-6K-RlG" secondAttribute="bottom" constant="15" id="gbo-gl-78K"/>
+                            <constraint firstAttribute="bottom" secondItem="eTp-Uy-Ho2" secondAttribute="bottom" id="jUt-ce-F4n"/>
+                            <constraint firstItem="eTp-Uy-Ho2" firstAttribute="trailing" secondItem="ukF-Ah-avJ" secondAttribute="trailing" id="sKv-sf-Ji3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ukF-Ah-avJ"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="eTp-Uy-Ho2" id="aN1-Do-w9Z"/>
+                        <outlet property="labelDescription" destination="1yg-Ox-vF1" id="0r9-iD-hP9"/>
+                        <outlet property="labelTitle" destination="InU-6K-RlG" id="2yd-zR-LAX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuJ-xJ-30P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2366.666666666667" y="-788.16964285714278"/>
+        </scene>
+        <!--Survey Detail-->
+        <scene sceneID="Znr-Sj-b8h">
+            <objects>
+                <tableViewController id="2mS-XX-6W1" customClass="SurveyDetailTVC" customModule="Nimble_Survey_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pk4-0d-bLM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="q9u-M7-QkH" style="IBUITableViewCellStyleDefault" id="9iu-Hh-QNR">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9iu-Hh-QNR" id="U65-aD-jkA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q9u-M7-QkH">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2mS-XX-6W1" id="huo-yL-SAC"/>
+                            <outlet property="delegate" destination="2mS-XX-6W1" id="FZZ-EB-FjM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Survey Detail" id="rQr-Ce-Xr8">
+                        <barButtonItem key="leftBarButtonItem" image="arrowBack" id="Z8k-UQ-bxJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="actionBack:" destination="2mS-XX-6W1" id="y5t-Xh-Xd0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9Y-67-NMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3059" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bDk-qd-QUv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W8O-ts-rZ1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hld-ho-SgC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.38823529410000002" green="0.14117647059999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.068525850772857666" green="0.11151265352964401" blue="0.20695093274116516" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YOo-HU-wAL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFN-bJ-bYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.98550724637687" y="-581.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="caZ-J5-Q5e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x7m-xH-yR5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R62-j0-Lnw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.068525850769999994" green="0.1115126535" blue="0.20695093270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wst-kO-e32" kind="relationship" relationship="rootViewController" id="LtM-1c-MDd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQk-WK-EiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.6521739130435" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowBack" width="22" height="22"/>
+    </resources>
+</document>
