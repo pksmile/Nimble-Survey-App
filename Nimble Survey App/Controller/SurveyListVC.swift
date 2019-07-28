@@ -14,6 +14,7 @@ class SurveyListVC: UIPageViewController{
     
     var currentPageIndex : Int  =   0
     
+    @IBOutlet weak var buttonRefresh: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         callWebservice()
@@ -116,15 +117,6 @@ class SurveyListVC: UIPageViewController{
 
 extension SurveyListVC : UIPageViewControllerDataSource, UIPageViewControllerDelegate{
     
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 2
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 3
-    }
-
-    
     // MARK:- UIPageViewControllerDataSource Methods
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -174,6 +166,7 @@ extension SurveyListVC : UIPageViewControllerDataSource, UIPageViewControllerDel
 
 extension SurveyListVC : SurveyImageClassDelegate{
     func clickedOnbutton(pageIndex: Int) {
+        currentPageIndex    =   pageIndex
         self.performSegue(withIdentifier: "segueSurvey", sender: self)
     }
     

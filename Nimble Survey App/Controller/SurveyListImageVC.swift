@@ -16,6 +16,7 @@ protocol SurveyImageClassDelegate {
 
 class SurveyListImageVC: UIViewController {
 
+    @IBOutlet weak var buttonTakeSurvey: RoundButton!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imageView: UIImageView!

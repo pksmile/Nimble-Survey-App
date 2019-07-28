@@ -10,6 +10,7 @@ import UIKit
 
 class SurveyDetailTVC: UITableViewController {
 
+    @IBOutlet weak var buttonBack: UIBarButtonItem!
     var modelSurvey : SurveyListModel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +44,14 @@ class SurveyDetailTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        let answer  =   modelSurvey.questions[indexPath.section].answers[indexPath.row]
-        cell.textLabel?.text    = answer.text ?? ""
-//        cell.detailTextLabel?.text    = answer.text ?? ""
-
+        print("Check for row:- \(indexPath)")
+        let question    =   modelSurvey.questions[indexPath.section]
+        if question.answers.count   >   0{
+            let answer  =   question.answers[indexPath.row]
+            cell.textLabel?.text    = answer.text ?? ""
+        }else{
+            cell.textLabel?.text    =   ""
+        }
         return cell
     }
     
